@@ -1,0 +1,27 @@
+.panel__titulo {
+  font-size: 30px; }
+
+.panel__cuerpo {
+  font-size: 20px; }
+
+.panel__pie {
+  font-size: 10px; }
+
+.tabla {
+  border: 1px solid green; }
+  .tabla__tamanyo-1 {
+    font-size: 18px; }
+  .tabla__tamanyo-2 {
+    font-size: 28px; }
+  .tabla__tamanyo-3 {
+    font-size: 38px; }
+  .tabla__texto--tamanyo-XS {
+    font-size: 10px; }
+  .tabla__texto--tamanyo-S {
+    font-size: 13px; }
+  .tabla__texto--tamanyo-M {
+    font-size: 15px; }
+  .tabla__texto--tamanyo-L {
+    font-size: 20px; }
+  .tabla__texto--tamanyo-XL {
+    font-size: 30px; }

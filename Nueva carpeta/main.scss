@@ -1,0 +1,43 @@
+$debug: true;
+
+
+$tallas:(10, XS),
+        (13,S),
+        (15,M),
+        (20,L),
+        (30,XL)
+;
+
+
+
+.panel{
+    &__titulo{ font-size: 30px;}
+    &__cuerpo{ font-size:20px;}
+    &__pie{ font-size: 10px;}
+  
+    
+} //se compilan las clases juntando el parent y la continuación de &
+
+.tabla{
+@if $debug == true {
+    border: 1px solid green;
+}
+@else{
+   border:1px solid red;
+}
+
+@for $i from 1 through 3 {
+        
+    &__tamanyo-#{$i}{
+        font-size: 8+($i*10)+px;
+    }
+}
+
+@each $size-number, $size in $tallas{
+    &__texto--tamanyo-#{$size}{
+        font-size: $size-number+px;
+    }
+}
+}
+
+
