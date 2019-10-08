@@ -1,26 +1,0 @@
-.grid {
-  display: grid; }
-  .grid__area1 {
-    grid-area: area1; }
-  .grid__area2 {
-    grid-area: area2; }
-  .grid__area3 {
-    grid-area: area3; }
-  .grid__area4 {
-    grid-area: area4; }
-
-.flex {
-  display: flex;
-  background-color: white; }
-  .flex--horizontal {
-    flex-direction: row; }
-  .flex--veritcal {
-    flex-direction: column; }
-
-.section__interes {
-  justify-content: center;
-  background-color: lightgrey;
-  grid-template-areas: "area1 area2 area2" "area1 area3 area4" "area1 area3 area4";
-  grid-template-rows: 250px 125px 250px;
-  grid-template-columns: 288px 300px 300px;
-  grid-gap: 25px; }
