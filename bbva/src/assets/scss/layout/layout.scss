@@ -16,14 +16,14 @@
   }
 
 
+
   @for $i from 1 through 4 {
     &__area#{$i} {
       grid-area: area + $i;
-     
-      
-    
     }
   }
+
+  
 }
 
   
