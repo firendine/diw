@@ -15,19 +15,27 @@
     grid-gap: 25px;
   }
 
+  &__section-cliente {
+    justify-content: center;
+    padding: 25px;
+    width: 960px;
+    height: 512px;
 
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+  
+  }
 
   @for $i from 1 through 4 {
     &__area#{$i} {
       grid-area: area + $i;
     }
   }
-
-  
 }
 
-  
 .layout-simple {
   display: flex;
+  
 
 }

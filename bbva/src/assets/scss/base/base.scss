@@ -10,9 +10,24 @@
 
     &__title{
         font-size: $section-title;
-        font-weight: lighter;
+        font-weight: 100;
         text-align: center;
     }
 
     
+}
+
+.section-cliente{
+    background-color: white;
+    
+    &__title{
+        font-size: $section-title;
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    &__button{
+        color: white;
+        background-color: teal;
+    }
 }
