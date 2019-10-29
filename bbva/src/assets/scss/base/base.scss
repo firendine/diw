@@ -2,11 +2,11 @@
     font-family: $main-font;
 }
 
-
-
 .section-interes{
     background-color: lightgray;
-    padding: 40px;
+    width:1423px;
+    height:884px;
+
 
     &__title{
         font-size: $section-title;
@@ -19,15 +19,17 @@
 
 .section-cliente{
     background-color: white;
+
     
-    &__title{
-        font-size: $section-title;
-        font-weight: lighter;
-        text-align: center;
+    &__header{
+        
     }
 
-    &__button{
-        color: white;
-        background-color: teal;
+    &__body{
+
+    }
+
+    &__footer{
+        align-content: center;
     }
 }

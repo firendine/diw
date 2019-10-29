@@ -4,18 +4,31 @@
     height: 100%;
 
 
-    &__title{
+    &__item-title{
         font-size: 20px;
         font-weight: 600;
         text-align: left;
     }
 
-    &__text{
+    &__item-text{
         //padding-top: 10px;
         //padding-bottom: 10px;
         font-size: 16px;
         font-weight: lighter;
 
+    }
+    &__title{
+        
+        font-size: $section-title;
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    &__button{
+        color: white;
+        background-color: teal;
+        text-align:center;
+        width: 50px;
     }
 
 
