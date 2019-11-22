@@ -1,0 +1,29 @@
+.l-main-page {
+  padding: 20px;
+  display: grid;
+
+
+  grid-template-areas:"menu-lateral main-menu"
+                      "menu-lateral main-content"
+                      "menu-lateral footer" ;
+  
+  grid-template-columns: 150px auto;
+  grid-template-rows:  200px 400px 120px;
+  grid-gap: 20px;
+
+
+
+  &__main-menu {
+    grid-area: main-menu;
+  }
+  &__menu-lateral {
+    grid-area: menu-lateral;
+  }
+
+  &__main-content {
+    grid-area: main-content;
+  }
+  &__footer {
+    grid-area: footer;
+  }
+}

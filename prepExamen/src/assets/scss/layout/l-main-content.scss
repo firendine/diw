@@ -1,0 +1,39 @@
+.l-main-content {
+
+    display: grid;
+  
+  
+    grid-template-areas:"area1 area2 area5" //probar "."
+                        "area1 area3 area5"
+                        "area1 area4 ." ;
+    
+    grid-template-columns: 20px 20px 20px;
+    grid-template-rows:  20px 20px 20px;
+    grid-gap: 10px;
+  
+  
+  
+    &__area1 {
+      grid-area: area1;
+      background-color: blue;
+    }
+    &__area2 {
+      grid-area: area2;
+      background-color: blue;
+    }
+  
+    &__area3 {
+      grid-area: area3;
+      background-color: blue;
+    }
+    &__area4 {
+      grid-area:area4;
+      background-color: blue;
+    }
+    &__area5 {
+        grid-area:area5;
+        background-color: blue;
+      }
+
+  }
+  
