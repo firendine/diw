@@ -8,10 +8,20 @@
                       "menu-lateral footer" ;
   
   grid-template-columns: 150px auto;
-  grid-template-rows:  200px 400px 120px;
+  grid-template-rows:  110px 380px 80px;
   grid-gap: 20px;
 
-
+  @media (max-width: 600px){
+    padding: 10px;
+       display: grid;
+       grid-template-areas:"main-menu" //probar "."
+                           "menu-lateral"
+                           "main-content"
+                           "footer";
+       grid-template-columns: 100%;
+       grid-template-rows:300px 300px 300px 300px ;
+       grid-gap: 20px; 
+}
 
   &__main-menu {
     grid-area: main-menu;
@@ -27,3 +37,5 @@
     grid-area: footer;
   }
 }
+
+

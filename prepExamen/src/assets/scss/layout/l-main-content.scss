@@ -1,39 +1,50 @@
 .l-main-content {
+  padding: 10px;
+  display: grid;
 
+  grid-template-areas:
+    "area1 area2 area5" //probar "."
+    "area1 area3 area5"
+    "area1 area4 .";
+
+  grid-template-columns: 450px 450px 200px;
+  grid-template-rows: 80px 80px 160px;
+  grid-gap: 20px;
+
+  @media (max-width: 600px) {
+    padding: 10px;
     display: grid;
-  
-  
-    grid-template-areas:"area1 area2 area5" //probar "."
-                        "area1 area3 area5"
-                        "area1 area4 ." ;
-    
-    grid-template-columns: 20px 20px 20px;
-    grid-template-rows:  20px 20px 20px;
-    grid-gap: 10px;
-  
-  
-  
-    &__area1 {
-      grid-area: area1;
-      background-color: blue;
-    }
-    &__area2 {
-      grid-area: area2;
-      background-color: blue;
-    }
-  
-    &__area3 {
-      grid-area: area3;
-      background-color: blue;
-    }
-    &__area4 {
-      grid-area:area4;
-      background-color: blue;
-    }
-    &__area5 {
-        grid-area:area5;
-        background-color: blue;
-      }
 
+    grid-template-areas:
+      "area1" //probar "."
+      "area2"
+      "area3"
+      "area4"
+      "area5";
+
+    grid-template-rows: 20px 20px 30px 30px 30px;
+    grid-gap: 20px;
   }
-  
+
+  &__area1 {
+    grid-area: area1;
+    background-color: blue;
+  }
+  &__area2 {
+    grid-area: area2;
+    background-color: blue;
+  }
+
+  &__area3 {
+    grid-area: area3;
+    background-color: blue;
+  }
+  &__area4 {
+    grid-area: area4;
+    background-color: blue;
+  }
+  &__area5 {
+    grid-area: area5;
+    background-color: blue;
+  }
+}
