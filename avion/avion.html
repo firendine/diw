@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+<link rel="stylesheet" href="avion.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div id="avion" draggable="true" ondragstart="drag(event)"><i class="fas fa-plane fa-3x" ></i></div><br><br>
+
+    <div id="sumaDespegue" ondrop="drop(event)" ondragover="allowDrop(event)" ><i id= "hola" class="fas fa-plane-arrival fa-10x" ></i></div>
+
+    <div id="restaDespegue" ondrop="drop(event)" ondragover="allowDrop(event)" ><i class="fas fa-plane-departure fa-10x" ></i></div>
+
+    <div id="vuelosTotales" valor="0">0</div>
+    
+</body>
+</html>
+<script>
+    let vuelos= parseInt(document.getElementById("vuelosTotales").getAttribute("valor"));
+    function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+  function drag(ev) {
+   // ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+
+    var operacion = $(ev.target).parent().attr('id')
+
+    
+    //alert(ev.target.id);
+    //alert(operacion);
+
+    if(operacion == "restaDespegue"){
+        vuelos--;
+        console.log(vuelos);
+        console.log(operacion);
+    }else if(operacion == "sumaDespegue"){
+        vuelos++;
+        console.log(vuelos);
+        console.log(operacion);
+    }else{
+        console.log(vuelos);
+        console.log(operacion);
+    }
+
+    $("#vuelosTotales").text(vuelos);
+    
+
+
+  }
+</script>

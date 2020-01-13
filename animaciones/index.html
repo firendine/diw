@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="c-cubo-rojo">Hola</div>
+    <div id="divAnim">Cambio</div>
+    <button class="button" id="but" onclick="action()">Acción</button>
+
+</body>
+
+</html>
+<script>
+    var divAnim = document.getElementById("divAnim");
+    function action() {
+
+
+       //divAnim.className = "c-cubo-cambiante";
+       divAnim.className = "c-cubo-cambiante";
+        setTimeout(function () {
+            divAnim.className = "";
+            
+        }, 1000)
+
+        //divAnim.className = "";
+
+        //setTimeout(function(){alert("Hello");}, 3000);
+
+
+    }
+
+
+</script>

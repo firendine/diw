@@ -1,0 +1,29 @@
+.c-cubo-rojo{
+    width: 60px;
+    height: 80px;
+    background-color: red;
+    position :relative;
+    animation: redAnim 3s infinite;
+}
+
+
+.c-cubo-cambiante{
+animation: changingAnim 3s ;
+animation-fill-mode: both;
+
+}
+
+
+
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+  }
+
+  @keyframes changingAnim{
+      0%{width:40px; color: red;background-color: blue;}
+      25%{width:80px; color: orange;background-color: green;}
+      50%{width:160px; color: yellow;background-color: yellowgreen;}
+      75%{width:320px; color: green;background-color: orange;}
+      100%{width: 640px; color: blue;background-color: red;}
+  }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <span id="despegues" ondrop="drop(event)" ondragover="allowDrop(event)" >Despegues:</span>
+        <div id="numDespegues" valor="0">0</div>
+    </div><br><br><br><br><br>
+    <div>
+        <span id="aterrizajes" ondrop="drop(event)" ondragover="allowDrop(event)">Aterrizajes:</span>
+        <div id="numAterrizajes" valor="0">0</div>
+    </div><br><br><br><br><br>
+
+
+
+    <div id="sumaAterrizaje" draggable="true" ondragstart="drag(event)">
+        <i class="fas fa-plane-arrival fa-4x"></i>
+    </div><br><br>
+
+
+
+    <div id="sumaDespegue" draggable="true" ondragstart="drag(event)">
+        <i class="fas fa-plane-departure fa-4x"></i>
+    </div><br><br>
+
+    <div id="avionPapel" draggable="true" ondragstart="drag(event)">
+        <i class="fas fa-paper-plane fa-4x"></i>
+    </div> <br><br>
+
+    <div id="eraseOne" draggable="true" ondragstart="drag(event)">
+        <i class="fas fa-trash-alt fa-4x"></i>
+    </div> <br><br>
+
+
+</body>
+
+</html>
+<script>
+    var aterrizajes = 0;
+    var despegues = 0;
+    let valorDragged;
+
+
+    function allowDrop(ev) {
+
+        if ((ev.target.id == "aterrizajes" && valorDragged == "sumaAterrizaje") ||
+            (ev.target.id == "despegues" && valorDragged == "sumaDespegue") ||
+            ((ev.target.id == "despegues" || ev.target.id == "aterrizajes") && valorDragged == "eraseOne") ||
+            (valorDragged == "avionPapel")) {
+            ev.preventDefault();
+        }
+    }
+
+
+    function drag(ev) {
+        valorDragged = ev.target.id;
+    }
+
+
+    function drop(ev) {
+        ev.preventDefault();
+
+
+
+        if (valorDragged == "eraseOne") {
+            if (ev.target.id == "aterrizajes") {
+                aterrizajes--;
+                $("#numAterrizajes").text(aterrizajes)
+            } else if (ev.target.id = "despegues") {
+                despegues--;
+                $("#numDespegues").text(despegues);
+            }
+
+        } else if (valorDragged == "avionPapel") {
+            alert("PROHIBIDO");
+
+        }else if(valorDragged.startsWith("suma")){
+            if (ev.target.id == "aterrizajes") {
+                aterrizajes++;
+                $("#numAterrizajes").text(aterrizajes);
+            } else if (ev.target.id == "despegues") {
+                despegues++;
+                $("#numDespegues").text(despegues);
+            };
+
+        }else{
+            alert("algo falla");
+        }
+
+    }
+</script>
